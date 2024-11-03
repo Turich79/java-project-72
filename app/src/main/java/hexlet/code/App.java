@@ -8,7 +8,7 @@ public class App {
             config.bundledPlugins.enableDevLogging();
         });
 
-        app.get("/", ctx -> ctx.result("Hello world!"));
+        app.get("/", ctx -> ctx.result("Hello world!2"));
 
         return app;
     }

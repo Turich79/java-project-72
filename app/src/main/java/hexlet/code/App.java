@@ -8,13 +8,18 @@ public class App {
             config.bundledPlugins.enableDevLogging();
         });
 
-        app.get("/", ctx -> ctx.result("Hello world!2"));
+        app.get("/", ctx -> ctx.result("Hello world!3"));
 
         return app;
     }
 
     public static void main(String[] args) {
         Javalin app = getApp();
-        app.start(7070);
+        app.start(getPort());
+    }
+
+    private static int getPort() {
+        String port = System.getenv().getOrDefault("PORT", "7070");
+        return Integer.valueOf(port);
     }
 }

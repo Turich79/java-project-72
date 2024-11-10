@@ -5,6 +5,7 @@ plugins {
     id("java")
     application
     checkstyle
+    id("io.freefair.lombok") version "8.6"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
@@ -28,6 +29,9 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:2.0.7")
     testImplementation("com.konghq:unirest-java:3.13.0")
     testImplementation("org.assertj:assertj-core:3.24.2")
+
+    implementation("com.h2database:h2:2.2.224")
+    implementation("com.zaxxer:HikariCP:5.1.0")
 }
 
 

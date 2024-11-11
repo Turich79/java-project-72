@@ -1,6 +1,5 @@
 package hexlet.code.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,8 +7,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-//@AllArgsConstructor
-public class Url {
+public final class Url {
     private Long id;
     private String name;
 

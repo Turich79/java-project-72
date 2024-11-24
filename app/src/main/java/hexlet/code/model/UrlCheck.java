@@ -2,26 +2,24 @@ package hexlet.code.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.sql.Timestamp;
-//import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Optional;
 
-@AllArgsConstructor
-@Getter
 @Setter
-public final class Url {
+@Getter
+@RequiredArgsConstructor
+@AllArgsConstructor
+public class UrlCheck {
     private Long id;
-    private String name;
-    private Timestamp createdAt;
-    private Optional<UrlCheck> lastCheck;
-
-//    private LocalDateTime createdAt;
-    public Url(String name) {
-        this.name = name;
-    }
+    private final Long urlId;
+    private final int statusCode;
+    private final String h1;
+    private final String title;
+    private final String description;
+    private final Timestamp createdAt;
 
     public String getCreatedAtFormatted() {
         return createdAt.toLocalDateTime().format(DateTimeFormatter.ofPattern("dd.MM.y H:mm"));

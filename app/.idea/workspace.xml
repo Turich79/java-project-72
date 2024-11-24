@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67454985-5c9d-4f1b-8173-05bf91833df4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/model/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/model/Url.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/h2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.jte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +68,12 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="distribution" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -70,6 +84,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -89,73 +104,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.app [:hexlet.code.App.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [:hexlet.code.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/artur/Hexlet/hexlet-assignments/java-web-ru/get-form&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AppTest.executor": "Run",
+    "Gradle.AppTest.testApp.executor": "Run",
+    "Gradle.AppTest.testMainPage.executor": "Run",
+    "Gradle.AppTest2.executor": "Run",
+    "Gradle.app [:hexlet.code.App.main()].executor": "Run",
+    "Gradle.app [:hexlet.code.Main.main()].executor": "Run",
+    "Gradle.app [build].executor": "Run",
+    "Gradle.app [checkstyleMain].executor": "Run",
+    "Gradle.app [checkstyleTest].executor": "Run",
+    "Gradle.app [run].executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.AppTest.testMainPage.executor": "Run",
+    "JUnit.AppTest.testPostWIthIncorrectURL.executor": "Run",
+    "JUnit.AppTest.testPostWithCorrectURL1.executor": "Run",
+    "JUnit.AppTest.testPostWithCorrectURL2.executor": "Run",
+    "JUnit.AppTest.testPostWithCorrectURL3.executor": "Run",
+    "JUnit.AppTest.testRoot.executor": "Run",
+    "JUnit.AppTest.testUrl.executor": "Run",
+    "JUnit.AppTest.testUrls.executor": "Run",
+    "JUnit.UrlCheckTest.testUrlsPage.executor": "Run",
+    "JUnit.UrlTest.testChecks.executor": "Run",
+    "JUnit.UrlTest.testUrlsPage.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/artur/Hexlet/hexlet-assignments/java-web-ru/get-form",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2511542",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\artur\java\java-project-72\app\src\main\resources\templates" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="hexlet.code" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hexlet.code.App" />
-      <module name="app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hexlet.code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hexlet.code.Main" />
-      <module name="app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hexlet.code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.app [checkstyleTest]">
     <configuration name="app [checkstyleMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -178,7 +175,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="app [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="app [checkstyleTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -189,7 +186,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="run" />
+            <option value="checkstyleTest" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -200,13 +197,61 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="AppTest.testMainPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hexlet.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hexlet.code" />
+      <option name="MAIN_CLASS_NAME" value="hexlet.code.AppTest" />
+      <option name="METHOD_NAME" value="testMainPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrlTest.testChecks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hexlet.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hexlet.code" />
+      <option name="MAIN_CLASS_NAME" value="hexlet.code.UrlTest" />
+      <option name="METHOD_NAME" value="testChecks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrlTest.testUrlsPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hexlet.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hexlet.code" />
+      <option name="MAIN_CLASS_NAME" value="hexlet.code.UrlTest" />
+      <option name="METHOD_NAME" value="testUrlsPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.app [checkstyleTest]" />
         <item itemvalue="Gradle.app [checkstyleMain]" />
-        <item itemvalue="Gradle.app [run]" />
-        <item itemvalue="Gradle.app [build]" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UrlTest.testChecks" />
+        <item itemvalue="JUnit.UrlTest.testUrlsPage" />
+        <item itemvalue="JUnit.AppTest.testMainPage" />
       </list>
     </recent_temporary>
   </component>

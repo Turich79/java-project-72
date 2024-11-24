@@ -1,21 +1,19 @@
-<html lang="en">
-    <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello Hexlet!</title>
-    </head>
-    <body>
-    <div class="col-lg-8 mx-auto p-4 py-md-5">
-        <main>
-        <H1>Анализатор страниц</H1>
-                <H3>Бесплатно проверяйте сайты на SEO пригодность </H3>
-                <main>
-                        <form action="/users" method="get">
-                                    <input type="search" name="term" value=""/>
-                                    <input type="submit" value="Проверить" />
-                                </form>
-                    </main>
-        </main>
-    </div>
-    </body>
-</html>
+@import hexlet.code.utils.NamedRoutes
+@import hexlet.code.dto.MainPage
+
+@param MainPage page
+
+@template.layout.page(
+    page = page,
+    flash = page.getFlash(),
+    content = @`
+        <h1 class="text-body-emphasis">Бесплатно проверяйте сайты на SEO пригодность</h1>
+        <p class="fs-5 col-md-8">Легко и быстро. Просто добавляйте ссылки.</p>
+        <div class="mb-5">
+            <form action="${NamedRoutes.urlsPath()}" method="post" class="d-flex">
+                <input class="form-control me-2" required type="search" placeholder="https://example.com" name="url" aria-label="Check">
+                <button class="btn btn-outline-success" type="submit">Проверить</button>
+            </form>
+        </div>
+    `
+)

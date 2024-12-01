@@ -30,7 +30,6 @@ public class App {
         hikariConfig.setJdbcUrl(getURL());
         authentication(hikariConfig);
         var dataSource = new HikariDataSource(hikariConfig);
-//        var sql = loadDatabaseSchema();
         var sql = loadDatabaseSchema("schema.sql");
 
         try (var connection = dataSource.getConnection();
@@ -68,7 +67,8 @@ public class App {
 //        String localURL = "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;";
 //        String url = System.getenv().getOrDefault("JDBC_DATABASE_URL", localURL);
 //        return url;
-        return System.getenv().getOrDefault("JDBC_DATABASE_URL", "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;");
+//        return System.getenv().getOrDefault("JDBC_DATABASE_URL", "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;");
+        return "jdbc:postgresql://db:5432/postgres";
     }
 
     private static TemplateEngine createTemplateEngine() {

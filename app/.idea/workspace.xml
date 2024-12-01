@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67454985-5c9d-4f1b-8173-05bf91833df4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/urls/JteindexGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/urls/JteindexGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/urls/JteindexGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/urls/JteshowGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/urls/JteshowGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/urls/JteshowGenerated.java" beforeDir="false" />
-    </list>
+    <list default="true" id="67454985-5c9d-4f1b-8173-05bf91833df4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +124,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/turic/Downloads/test-data",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/artur/java/java-project-72/app/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2511542",
@@ -143,6 +132,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\artur\java\java-project-72\app\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\artur\java\java-project-72\app\src\test\resources" />
       <recent name="\\wsl.localhost\Ubuntu\home\artur\java\java-project-72\app\src\test\java\hexlet\code" />
@@ -156,7 +148,7 @@
       <recent name="hexlet.code" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
     <configuration name="app [checkstyleMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -249,10 +241,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.app [checkstyleMain]" />
+        <item itemvalue="Gradle.app [checkstyleTest]" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest$RootTest" />
-        <item itemvalue="Gradle.app [checkstyleTest]" />
-        <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="JUnit.UrlTest.testChecks" />
       </list>
     </recent_temporary>

@@ -148,7 +148,7 @@
       <recent name="hexlet.code" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration name="app [checkstyleMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -241,9 +241,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Gradle.app [checkstyleTest]" />
-        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest$RootTest" />
         <item itemvalue="JUnit.UrlTest.testChecks" />
       </list>

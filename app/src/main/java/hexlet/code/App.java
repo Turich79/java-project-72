@@ -28,9 +28,10 @@ public class App {
 
         var hikariConfig = new HikariConfig();
         hikariConfig.setJdbcUrl(getURL());
-        authentication(hikariConfig);
+//        authentication(hikariConfig);
         var dataSource = new HikariDataSource(hikariConfig);
-        var sql = loadDatabaseSchema();
+//        var sql = loadDatabaseSchema();
+        var sql = loadDatabaseSchema("schema.sql");
 
         try (var connection = dataSource.getConnection();
              var statement = connection.createStatement()) {
@@ -64,9 +65,10 @@ public class App {
     }
 
     private static String getURL() {
-        String localURL = "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;";
-        String url = System.getenv().getOrDefault("JDBC_DATABASE_URL", localURL);
-        return url;
+//        String localURL = "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;";
+//        String url = System.getenv().getOrDefault("JDBC_DATABASE_URL", localURL);
+//        return url;
+        return System.getenv().getOrDefault("JDBC_DATABASE_URL", "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;");
     }
 
     private static TemplateEngine createTemplateEngine() {
@@ -76,16 +78,20 @@ public class App {
         return templateEngine;
     }
 
-    private static void authentication(HikariConfig config) {
-        String username = System.getenv("JDBC_DATABASE_USERNAME");
-        String password = System.getenv("JDBC_DATABASE_PASSWORD");
-        config.setUsername(username);
-        config.setPassword(password);
-    }
+//    private static void authentication(HikariConfig config) {
+//        String username = System.getenv("JDBC_DATABASE_USERNAME");
+//        String password = System.getenv("JDBC_DATABASE_PASSWORD");
+//        config.setUsername(username);
+//        config.setPassword(password);
+//    }
 
-    private static String loadDatabaseSchema() throws IOException {
-        var name = System.getenv("JDBC_DATABASE_URL") == null ? "h2.sql" : "postgre.sql";
-        var inputStream = App.class.getClassLoader().getResourceAsStream(name);
+    private static String loadDatabaseSchema(String fileName) throws IOException {
+//        var name = System.getenv("JDBC_DATABASE_URL") == null ? "h2.sql" : "postgre.sql";
+//        var inputStream = App.class.getClassLoader().getResourceAsStream(name);
+//        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+//            return reader.lines().collect(Collectors.joining("\n"));
+//        }
+        var inputStream = App.class.getClassLoader().getResourceAsStream(fileName);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
             return reader.lines().collect(Collectors.joining("\n"));
         }

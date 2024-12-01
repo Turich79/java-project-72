@@ -79,8 +79,10 @@ public class App {
     }
 
     private static void authentication(HikariConfig config) {
-        String username = System.getenv().getOrDefault("JDBC_DATABASE_USERNAME", "postgres");
-        String password = System.getenv().getOrDefault("JDBC_DATABASE_PASSWORD", "password");
+//        String username = System.getenv().getOrDefault("JDBC_DATABASE_USERNAME", "postgres");
+//        String password = System.getenv().getOrDefault("JDBC_DATABASE_PASSWORD", "password");
+        String username = System.getenv("JDBC_DATABASE_USERNAME");
+        String password = System.getenv("JDBC_DATABASE_PASSWORD");
         config.setUsername(username);
         config.setPassword(password);
     }

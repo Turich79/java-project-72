@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS urls;
 
 CREATE TABLE urls (
 --    id bigint PRIMARY KEY AUTO_INCREMENT,
-    id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+--    id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    id SERIAL PRIMARY KEY NOT NULL,
     name varchar(255) NOT NULL,
     created_at timestamp
 );
@@ -12,8 +13,9 @@ CREATE TABLE urls (
 DROP TABLE IF EXISTS url_checks;
 
 CREATE TABLE url_checks (
-    id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+--    id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 --    id bigint PRIMARY KEY AUTO_INCREMENT,
+    id SERIAL PRIMARY KEY NOT NULL,
     url_id bigint,
     status_code int,
     h1 varchar(255) NOT NULL,

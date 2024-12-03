@@ -42,6 +42,7 @@ dependencies {
     implementation("io.javalin:javalin:6.1.3")
     implementation("io.javalin:javalin-bundle:6.1.3")
     implementation("io.javalin:javalin-rendering:6.1.3")
+    implementation("org.postgresql:postgresql:42.7.1")
 
 }
 

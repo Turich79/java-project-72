@@ -21,6 +21,7 @@ public final class Url {
 //    private LocalDateTime createdAt;
     public Url(String name) {
         this.name = name;
+        this.createdAt = new Timestamp(System.currentTimeMillis());
     }
 
     public String getCreatedAtFormatted() {

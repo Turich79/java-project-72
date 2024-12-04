@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="67454985-5c9d-4f1b-8173-05bf91833df4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hexlet/code/project/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hexlet/code/project/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/model/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/model/Url.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hexlet/code/UrlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hexlet/code/UrlTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,29 +152,7 @@
       <recent name="hexlet.code" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
-    <configuration name="app [checkstyleMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="checkstyleMain" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.app [checkstyleTest]">
     <configuration name="app [checkstyleTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -196,16 +175,16 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest$RootTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hexlet.code.project.*" />
+          <option name="PATTERN" value="hexlet.code.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hexlet.code.project.AppTest" />
-      <option name="MAIN_CLASS_NAME" value="hexlet.code.project.AppTest$RootTest" />
+      <option name="PACKAGE_NAME" value="hexlet.code" />
+      <option name="MAIN_CLASS_NAME" value="hexlet.code.AppTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -221,6 +200,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="hexlet.code.project" />
       <option name="MAIN_CLASS_NAME" value="hexlet.code.project.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hexlet.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hexlet.code" />
+      <option name="MAIN_CLASS_NAME" value="hexlet.code.UrlTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -244,10 +238,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.app [checkstyleMain]" />
-        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="Gradle.app [checkstyleTest]" />
-        <item itemvalue="JUnit.AppTest$RootTest" />
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.UrlTest" />
+        <item itemvalue="JUnit.AppTest (1)" />
         <item itemvalue="JUnit.UrlTest.testChecks" />
       </list>
     </recent_temporary>

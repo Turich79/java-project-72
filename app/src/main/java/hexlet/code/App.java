@@ -25,17 +25,30 @@ import java.util.stream.Collectors;
 public class App {
     public static Javalin getApp() throws SQLException, IOException {
         Logger logger = LoggerFactory.getLogger(App.class);
-
+        //////////
         var hikariConfig = new HikariConfig();
-        hikariConfig.setJdbcUrl(getURL());
-        authentication(hikariConfig);
-        var dataSource = new HikariDataSource(hikariConfig);
-        var sql = loadDatabaseSchema("schema.sql");
+        hikariConfig.setJdbcUrl(getDatabaseUrl());
 
+        var dataSource = new HikariDataSource(hikariConfig);
+        String sql = loadDatabaseSchema("schema.sql");
+
+        logger.info(sql);
         try (var connection = dataSource.getConnection();
-             var statement = connection.createStatement()) {
+            var statement = connection.createStatement()) {
             statement.execute(sql);
         }
+        //////////
+//        var hikariConfig = new HikariConfig();
+//        hikariConfig.setJdbcUrl(getURL());
+//        authentication(hikariConfig);
+//        var dataSource = new HikariDataSource(hikariConfig);
+//        var sql = loadDatabaseSchema("schema.sql");
+//
+//        try (var connection = dataSource.getConnection();
+//             var statement = connection.createStatement()) {
+//            statement.execute(sql);
+//        }
+        ///////////
         BaseRepository.dataSource = dataSource;
 
         var app = Javalin.create(config -> {
@@ -63,15 +76,19 @@ public class App {
         return Integer.valueOf(port);
     }
 
-    private static String getURL() {
-//        String localURL = "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;";
-//        String url = System.getenv().getOrDefault("JDBC_DATABASE_URL", localURL);
-//        return url;
-//        return System.getenv().getOrDefault("JDBC_DATABASE_URL", "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;");
-//        return "jdbc:postgresql://db:5432/postgres";
-        ////031224 делаю заглушку для прохождения тестов
-        return "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;";
+    private static String getDatabaseUrl() {
+        return System.getenv().getOrDefault("JDBC_DATABASE_URL", "jdbc:h2:mem:project");
     }
+
+//    private static String getURL() {
+////        String localURL = "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;";
+////        String url = System.getenv().getOrDefault("JDBC_DATABASE_URL", localURL);
+////        return url;
+////        return System.getenv().getOrDefault("JDBC_DATABASE_URL", "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;");
+////        return "jdbc:postgresql://db:5432/postgres";
+//        ////031224 делаю заглушку для прохождения тестов
+//        return "jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;";
+//    }
 
     private static TemplateEngine createTemplateEngine() {
         ClassLoader classLoader = App.class.getClassLoader();

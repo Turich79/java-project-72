@@ -97,14 +97,14 @@ public class App {
         return templateEngine;
     }
 
-    private static void authentication(HikariConfig config) {
-//        String username = System.getenv().getOrDefault("JDBC_DATABASE_USERNAME", "postgres");
-//        String password = System.getenv().getOrDefault("JDBC_DATABASE_PASSWORD", "password");
-        String username = System.getenv("JDBC_DATABASE_USERNAME");
-        String password = System.getenv("JDBC_DATABASE_PASSWORD");
-        config.setUsername(username);
-        config.setPassword(password);
-    }
+//    private static void authentication(HikariConfig config) {
+////        String username = System.getenv().getOrDefault("JDBC_DATABASE_USERNAME", "postgres");
+////        String password = System.getenv().getOrDefault("JDBC_DATABASE_PASSWORD", "password");
+//        String username = System.getenv("JDBC_DATABASE_USERNAME");
+//        String password = System.getenv("JDBC_DATABASE_PASSWORD");
+//        config.setUsername(username);
+//        config.setPassword(password);
+//    }
 
     private static String loadDatabaseSchema(String fileName) throws IOException {
 //        var name = System.getenv("JDBC_DATABASE_URL") == null ? "h2.sql" : "postgre.sql";

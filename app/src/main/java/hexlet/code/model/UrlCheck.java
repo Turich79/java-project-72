@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 @Getter
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class UrlCheck {
+public final class UrlCheck {
     private Long id;
     private final Long urlId;
     private final int statusCode;

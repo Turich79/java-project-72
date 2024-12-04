@@ -22,7 +22,7 @@ import java.sql.SQLException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class UrlTest {
+public final class UrlTest {
     private static Javalin app;
     private static final int STATUS_SUCCESS = 200;
     private static MockWebServer mockWebServer;

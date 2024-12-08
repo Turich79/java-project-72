@@ -18,7 +18,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.SQLException;
-//import java.sql.Timestamp;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -45,7 +44,6 @@ public final class UrlTest {
     @Test
     void testUrlsPage() throws Exception {
         Url url = new Url(baseUrl);
-//        url.setCreatedAt(new Timestamp(System.currentTimeMillis()));
         UrlRepository.save(url);
         JavalinTest.test(app, (server, client) -> {
             var response = client.get("/urls");
@@ -57,7 +55,6 @@ public final class UrlTest {
     @Test
     public void testChecks() throws SQLException {
         Url url = new Url(baseUrl);
-//        url.setCreatedAt(new Timestamp(System.currentTimeMillis()));
         UrlRepository.save(url);
         JavalinTest.test(app, (server, client) -> {
             Url urlTest = UrlRepository.search(url.getName())

@@ -3,7 +3,7 @@ import hexlet.code.dto.urls.UrlPage;
 import hexlet.code.utils.NamedRoutes;
 public final class JteshowGenerated {
 	public static final String JTE_NAME = "urls/show.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,5,5,9,9,12,12,12,13,13,13,16,16,16,16,16,16,16,16,16,22,22,24,24,37,37,38,38,40,40,40,41,41,41,42,42,42,43,43,43,44,44,44,45,45,45,47,47,48,48,52,52,52,52,52,3,3,3,3};
+	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,5,5,8,8,11,11,11,12,12,12,15,15,15,15,15,15,15,15,15,21,21,23,23,36,36,37,37,39,39,39,40,40,40,41,41,41,42,42,42,43,43,43,44,44,44,46,46,47,47,51,51,51,51,51,3,3,3,3};
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, UrlPage page) {
 		jteOutput.writeContent("\r\n");
 		gg.jte.generated.ondemand.layout.JtepageGenerated.render(jteOutput, jteHtmlInterceptor, page, new gg.jte.html.HtmlContent() {
@@ -55,7 +55,7 @@ public final class JteshowGenerated {
 				}
 				jteOutput.writeContent("\r\n                </tbody>\r\n            </table>\r\n        </main>\r\n    ");
 			}
-		}, page.getFlash());
+		});
 	}
 	public static void renderMap(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, java.util.Map<String, Object> params) {
 		UrlPage page = (UrlPage)params.get("page");

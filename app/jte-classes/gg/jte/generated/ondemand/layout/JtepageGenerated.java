@@ -1,24 +1,23 @@
 package gg.jte.generated.ondemand.layout;
 import gg.jte.Content;
-import hexlet.code.dto.flash.Flash;
 import hexlet.code.utils.NamedRoutes;
 import hexlet.code.dto.BasePage;
 public final class JtepageGenerated {
 	public static final String JTE_NAME = "layout/page.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,1,2,3,5,5,5,18,18,18,19,19,19,19,20,20,20,22,22,26,26,26,26,26,26,26,26,26,29,29,29,29,29,29,29,29,29,35,35,35,42,42,42,5,6,7,7,7,7};
-	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, BasePage page, Content content, Flash flash) {
+	public static final int[] JTE_LINE_INFO = {0,0,1,2,4,4,4,16,16,16,17,17,17,17,18,18,18,21,21,26,26,26,26,26,26,26,26,26,29,29,29,29,29,29,29,29,29,35,35,35,42,42,42,4,5,5,5,5};
+	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, BasePage page, Content content) {
 		jteOutput.writeContent("\r\n<!doctype html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\"><link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">\r\n    <title>Анализатор страниц</title>\r\n</head>\r\n<body>\r\n    ");
-		if (flash != null) {
-			jteOutput.writeContent("\r\n    <div class=\"alert alert-");
+		if (page != null && page.getFlash() != null) {
+			jteOutput.writeContent("\r\n            <div class=\"rounded-0 m-0 alert alert-dismissible fade show alert-");
 			jteOutput.setContext("div", "class");
-			jteOutput.writeUserContent(flash.getType().name().toLowerCase());
+			jteOutput.writeUserContent(page.getFlashType());
 			jteOutput.setContext("div", null);
-			jteOutput.writeContent("\" role=\"alert\">\r\n        ");
-			jteOutput.setContext("div", null);
-			jteOutput.writeUserContent(page.getFlash().getText());
-			jteOutput.writeContent("\r\n    </div>\r\n    ");
+			jteOutput.writeContent("\" role=\"alert\">\r\n                <p class=\"m-0\">");
+			jteOutput.setContext("p", null);
+			jteOutput.writeUserContent(page.getFlash());
+			jteOutput.writeContent("</p>\r\n                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>\r\n            </div>\r\n    ");
 		}
-		jteOutput.writeContent("\r\n    <div class=\"col-lg-8 mx-auto p-4 py-md-5\">\r\n        <header class=\"d-flex align-items-center pb-3 mb-5 border-bottom\">\r\n            <nav class=\"nav\">\r\n                <a");
+		jteOutput.writeContent("\r\n\r\n    <div class=\"col-lg-8 mx-auto p-4 py-md-5\">\r\n        <header class=\"d-flex align-items-center pb-3 mb-5 border-bottom\">\r\n            <nav class=\"nav\">\r\n                <a");
 		var __jte_html_attribute_0 = NamedRoutes.rootPath();
 		if (gg.jte.runtime.TemplateUtils.isAttributeRendered(__jte_html_attribute_0)) {
 			jteOutput.writeContent(" href=\"");
@@ -44,7 +43,6 @@ public final class JtepageGenerated {
 	public static void renderMap(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, java.util.Map<String, Object> params) {
 		BasePage page = (BasePage)params.getOrDefault("page", null);
 		Content content = (Content)params.get("content");
-		Flash flash = (Flash)params.getOrDefault("flash", null);
-		render(jteOutput, jteHtmlInterceptor, page, content, flash);
+		render(jteOutput, jteHtmlInterceptor, page, content);
 	}
 }

@@ -1,7 +1,5 @@
 package hexlet.code.controller;
 
-import hexlet.code.dto.flash.Flash;
-import hexlet.code.dto.flash.FlashType;
 import hexlet.code.model.UrlCheck;
 import hexlet.code.repository.CheckRepository;
 import hexlet.code.repository.UrlRepository;
@@ -39,11 +37,9 @@ public class CheckController {
                 UrlCheck check = new UrlCheck(urlId, statusCode, h1, title, description, createdAt);
                 CheckRepository.save(check);
             } catch (Exception e) {
-                var flash = new Flash(
-                        "Failed to establish a connection to the site, verification is not possible.",
-                        FlashType.DANGER
-                );
-                ctx.sessionAttribute("flash", flash);
+                ctx.sessionAttribute("flash", "Failed to establish a connection to the site, "
+                        + "verification is not possible.");
+                ctx.sessionAttribute("flash-type", "danger");
             }
         } else {
             throw new SQLException("Url with this ID doesn't exist");

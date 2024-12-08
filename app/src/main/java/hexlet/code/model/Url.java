@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
-//import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
@@ -18,10 +17,8 @@ public final class Url {
     private Timestamp createdAt;
     private Optional<UrlCheck> lastCheck;
 
-//    private LocalDateTime createdAt;
     public Url(String name) {
         this.name = name;
-        this.createdAt = new Timestamp(System.currentTimeMillis());
     }
 
     public String getCreatedAtFormatted() {

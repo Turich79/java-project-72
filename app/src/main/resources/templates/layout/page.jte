@@ -1,11 +1,9 @@
 @import gg.jte.Content
-@import hexlet.code.dto.flash.Flash
 @import hexlet.code.utils.NamedRoutes
 @import hexlet.code.dto.BasePage
 
 @param BasePage page = null
 @param Content content
-@param Flash flash = null
 
 <!doctype html>
 <html lang="en">
@@ -16,11 +14,13 @@
     <title>Анализатор страниц</title>
 </head>
 <body>
-    @if(flash != null)
-    <div class="alert alert-${flash.getType().name().toLowerCase()}" role="alert">
-        ${page.getFlash().getText()}
-    </div>
+    @if(page != null && page.getFlash() != null)
+            <div class="rounded-0 m-0 alert alert-dismissible fade show alert-${page.getFlashType()}" role="alert">
+                <p class="m-0">${page.getFlash()}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
     @endif
+
     <div class="col-lg-8 mx-auto p-4 py-md-5">
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
             <nav class="nav">

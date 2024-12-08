@@ -8,15 +8,17 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.sql.Timestamp;
 
 public class UrlRepository extends BaseRepository {
     public static void save(Url url) throws SQLException {
         if (search(url.getName()).isEmpty()) {
             var sql = "INSERT INTO urls (name, created_at) VALUES (?, ?)";
+            var datetime = new Timestamp(System.currentTimeMillis());
             try (var conn = dataSource.getConnection();
-                 var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+                var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 preparedStatement.setString(1, url.getName());
-                preparedStatement.setTimestamp(2, url.getCreatedAt());
+                preparedStatement.setTimestamp(2, datetime);
                 preparedStatement.executeUpdate();
                 var generatedKeys = preparedStatement.getGeneratedKeys();
                 if (generatedKeys.next()) {
@@ -33,7 +35,7 @@ public class UrlRepository extends BaseRepository {
     public static Optional<Url> search(String name) throws SQLException {
         var sql = "SELECT * FROM urls WHERE name = ?";
         try (var conn = dataSource.getConnection();
-             var preparedStatement = conn.prepareStatement(sql)) {
+            var preparedStatement = conn.prepareStatement(sql)) {
             preparedStatement.setString(1, name);
             var resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
@@ -51,7 +53,7 @@ public class UrlRepository extends BaseRepository {
     public static Optional<Url> find(Long id) throws SQLException {
         var sql = "SELECT * FROM urls WHERE id = ?";
         try (var conn = dataSource.getConnection();
-             var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setLong(1, id);
             var resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {

@@ -5,7 +5,6 @@
 
 @template.layout.page(
     page = page,
-    flash = page.getFlash(),
     content = @`
         <h1 class="text-body-emphasis">Бесплатно проверяйте сайты на SEO пригодность</h1>
         <p class="fs-5 col-md-8">Легко и быстро. Просто добавляйте ссылки.</p>

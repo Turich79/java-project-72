@@ -5,7 +5,6 @@
 
 @template.layout.page(
     page = page,
-    flash = page.getFlash(),
     content = @`
         <main>
             <div>

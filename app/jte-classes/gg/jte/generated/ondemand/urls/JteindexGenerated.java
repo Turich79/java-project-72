@@ -52,7 +52,7 @@ public final class JteindexGenerated {
 				}
 				jteOutput.writeContent("\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    ");
 			}
-		}, null);
+		});
 	}
 	public static void renderMap(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, java.util.Map<String, Object> params) {
 		UrlsPage page = (UrlsPage)params.get("page");

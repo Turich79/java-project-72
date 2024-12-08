@@ -24,19 +24,19 @@
                 @if(!page.getUrls().isEmpty())
                 @for(var url : page.getUrls())
                     <tr>
-                        <th scope="row">${url.getId()}</th>
-                        <td><a href="${NamedRoutes.urlPath(url.getId())}">${url.getName()}</a></td>
-                        <td>${url.getCreatedAtFormatted()}</td>
-                        @if(url.getLastCheck().isPresent())
-                            <td>${url.getLastCheck().get().getCreatedAtFormatted()}</td>
-                            <td>${url.getLastCheck().get().getStatusCode()}</td>
-                        @else
-                            <td></td>
-                            <td></td>
-                        @endif
+                         <th scope="row">${url.getId()}</th>
+                         <td><a href="${NamedRoutes.urlPath(url.getId())}">${url.getName()}</a></td>
+                         <td>${url.getCreatedAtFormatted()}</td>
+                         @if(url.getLastCheck().isPresent())
+                             <td>${url.getLastCheck().get().getCreatedAtFormatted()}</td>
+                             <td>${url.getLastCheck().get().getStatusCode()}</td>
+                         @else
+                         <td></td>
+                         <td></td>
+                         @endif
                     </tr>
-                @endfor
-                @endif
+                    @endfor
+                    @endif
                 </tbody>
             </table>
         </div>

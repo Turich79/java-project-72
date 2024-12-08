@@ -24,7 +24,6 @@ import java.util.Optional;
 public class UrlController {
     public static void index(Context ctx) throws SQLException {
         var urls = UrlRepository.getUrls();
-//        var page = new UrlsPage(urls);
         Map<Long, UrlCheck> urlChecks = CheckRepository.findLatestChecks();
         var page = new UrlsPage(urls, urlChecks);
         page.setFlash(ctx.consumeSessionAttribute("flash"));

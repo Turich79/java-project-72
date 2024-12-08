@@ -90,10 +90,6 @@ public class CheckRepository extends BaseRepository {
                 var description = resultSet.getString("description");
                 var createdAt = resultSet.getTimestamp("created_at");
                 var check = new UrlCheck(id, urlId, statusCode, h1, title, description, createdAt);
-//                var check = new UrlCheck(statusCode, title, h1, description);
-//                check.setId(id);
-//                check.setUrlId(urlId);
-//                check.setCreatedAt(createdAt);
                 result.put(urlId, check);
             }
             return result;

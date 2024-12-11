@@ -1,7 +1,5 @@
 package hexlet.code.controller;
 
-//import hexlet.code.dto.flash.Flash;
-//import hexlet.code.dto.flash.FlashType;
 import hexlet.code.dto.urls.UrlPage;
 import hexlet.code.dto.urls.UrlsPage;
 import hexlet.code.model.Url;

@@ -8,6 +8,8 @@ import io.javalin.http.Context;
 import kong.unirest.core.Unirest;
 import org.jsoup.Jsoup;
 
+//import javax.swing.text.html.parser.Element;
+import org.jsoup.nodes.Element;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
@@ -21,18 +23,24 @@ public class CheckController {
                 var statusCode = response.getStatus();
                 var page = Jsoup.parse(response.getBody());
                 String title = page.title();
-                String h1;
-                String description;
-                try {
-                    h1 = page.selectFirst("h1").text();
-                } catch (NullPointerException e) {
-                    h1 = "";
-                }
-                try {
-                    description = page.selectFirst("meta[name=description]").attr("content");
-                } catch (NullPointerException e) {
-                    description = "";
-                }
+                /////////////
+//                String h1;
+//                String description;
+//                try {
+//                    h1 = page.selectFirst("h1").text();
+//                } catch (NullPointerException e) {
+//                    h1 = "";
+//                }
+//                try {
+//                    description = page.selectFirst("meta[name=description]").attr("content");
+//                } catch (NullPointerException e) {
+//                    description = "";
+//                }
+                //////////////
+                Element h1Element = page.selectFirst("h1");
+                String h1 = h1Element == null ? "" : h1Element.text();
+                Element descriptionElement = page.selectFirst("meta[name=description]");
+                String description = descriptionElement == null ? "" : descriptionElement.attr("content");
                 var createdAt = new Timestamp(System.currentTimeMillis());
                 UrlCheck check = new UrlCheck(urlId, statusCode, h1, title, description, createdAt);
                 CheckRepository.save(check);

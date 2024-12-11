@@ -54,27 +54,6 @@ public class CheckRepository extends BaseRepository {
         }
     }
 
-//    public static List<UrlCheck> getUrlChecks() throws SQLException {
-//        var sql = "SELECT * FROM url_checks";
-//        try (var conn = dataSource.getConnection();
-//             var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-//            var resultSet = preparedStatement.executeQuery();
-//            var urlChecks = new LinkedList<UrlCheck>();
-//            while (resultSet.next()) {
-//                var id = resultSet.getLong("id");
-//                var urlId = resultSet.getLong("url_id");
-//                var statusCode = resultSet.getInt("status_code");
-//                var h1 = resultSet.getString("h1");
-//                var title = resultSet.getString("title");
-//                var description = resultSet.getString("description");
-//                var createdAt = resultSet.getTimestamp("created_at");
-//                var check = new UrlCheck(id, urlId, statusCode, h1, title, description, createdAt);
-//                urlChecks.addFirst(check);
-//            }
-//            return urlChecks;
-//        }
-//    }
-
     public static Map<Long, UrlCheck> findLatestChecks() throws SQLException {
         var sql = "SELECT DISTINCT ON (url_id) * from url_checks order by url_id DESC, id DESC";
         try (var conn = dataSource.getConnection();

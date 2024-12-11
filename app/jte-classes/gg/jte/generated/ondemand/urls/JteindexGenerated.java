@@ -16,10 +16,10 @@ public final class JteindexGenerated {
 				if (!page.getUrls().isEmpty()) {
 					jteOutput.writeContent("\r\n                ");
 					for (var url : page.getUrls()) {
-						jteOutput.writeContent("\r\n                    <tr>\r\n                        <th scope=\"row\">");
+						jteOutput.writeContent("\r\n                    <tr>\r\n                         <th scope=\"row\">");
 						jteOutput.setContext("th", null);
 						jteOutput.writeUserContent(url.getId());
-						jteOutput.writeContent("</th>\r\n                        <td><a");
+						jteOutput.writeContent("</th>\r\n                         <td><a");
 						var __jte_html_attribute_0 = NamedRoutes.urlPath(url.getId());
 						if (gg.jte.runtime.TemplateUtils.isAttributeRendered(__jte_html_attribute_0)) {
 							jteOutput.writeContent(" href=\"");
@@ -31,24 +31,24 @@ public final class JteindexGenerated {
 						jteOutput.writeContent(">");
 						jteOutput.setContext("a", null);
 						jteOutput.writeUserContent(url.getName());
-						jteOutput.writeContent("</a></td>\r\n                        <td>");
+						jteOutput.writeContent("</a></td>\r\n                         <td>");
 						jteOutput.setContext("td", null);
 						jteOutput.writeUserContent(url.getCreatedAtFormatted());
-						jteOutput.writeContent("</td>\r\n                        ");
+						jteOutput.writeContent("</td>\r\n                         ");
 						if (url.getLastCheck().isPresent()) {
-							jteOutput.writeContent("\r\n                            <td>");
+							jteOutput.writeContent("\r\n                             <td>");
 							jteOutput.setContext("td", null);
 							jteOutput.writeUserContent(url.getLastCheck().get().getCreatedAtFormatted());
-							jteOutput.writeContent("</td>\r\n                            <td>");
+							jteOutput.writeContent("</td>\r\n                             <td>");
 							jteOutput.setContext("td", null);
 							jteOutput.writeUserContent(url.getLastCheck().get().getStatusCode());
-							jteOutput.writeContent("</td>\r\n                        ");
+							jteOutput.writeContent("</td>\r\n                         ");
 						} else {
-							jteOutput.writeContent("\r\n                            <td></td>\r\n                            <td></td>\r\n                        ");
+							jteOutput.writeContent("\r\n                         <td></td>\r\n                         <td></td>\r\n                         ");
 						}
-						jteOutput.writeContent("\r\n                    </tr>\r\n                ");
+						jteOutput.writeContent("\r\n                    </tr>\r\n                    ");
 					}
-					jteOutput.writeContent("\r\n                ");
+					jteOutput.writeContent("\r\n                    ");
 				}
 				jteOutput.writeContent("\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    ");
 			}
